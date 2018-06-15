@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background: #f2b632;">
+  
+
+  <ion-list>
+    <ion-label style="font-size: 20px;" fixed> Email</ion-label>
+    <ion-item>
+      <ion-input type="text"  [(ngModel)]="dados.email"> </ion-input>
+    </ion-item>
+     <ion-label  style="font-size: 20px;" fixed> Senha</ion-label>
+      <ion-item>
+      <ion-input type="password" [(ngModel)]="dados.senha"> </ion-input>
+    </ion-item>
+    
+  <button  ion-button block (click)="login(dados)" style="margin-top: 60px; background: black; color: white;">Entrar </button>
+
+  </ion-list>
+
+
+</ion-content>

@@ -1,0 +1,38 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Nova Tarefa</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background: #f2b632;">
+	<ion-list style="background: #f2b632;">
+ 		<h5>Identificador</h5>
+ 		  <ion-item>
+			<ion-select [(ngModel)]="tarefa.dono" >
+  				  <ion-option style="width: 100%;" value="{{usuario.id}}">ID {{usuario.id}}</ion-option>
+    		 </ion-select>
+ 			</ion-item>
+		
+ 		<h5>Titulo</h5>
+ 		<ion-item>
+ 			<ion-input  type="text" [(ngModel)]="tarefa.titulo" > </ion-input>
+		</ion-item>
+		<h5>Data Prazo</h5>
+ 		<ion-item>
+ 			<ion-input type="date"  [(ngModel)]="tarefa.data" > </ion-input>
+ 		</ion-item>
+ 		<h5 >Nota</h5>
+ 		<ion-item>
+ 			<ion-textarea style="width: 100px; height: 100px;" [(ngModel)]="tarefa.texto">
+ 				
+ 			</ion-textarea>
+	 	</ion-item>
+ 		
+  			<button  ion-button block  (click)="cad_tarefa(tarefa)" style="margin-top: 40px; background: black; color: white;">Cadastrar</button>
+ 	</ion-list>
+
+</ion-content>
