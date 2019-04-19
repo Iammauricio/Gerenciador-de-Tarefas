@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams , ToastController} from 'ionic-angular';
 import { ServiceProvider } from '../../providers/service/service';
-import {TarefasPage} from '../tarefas/tarefas';
 import { Http } from '@angular/http';
 // import para a animação loading
 import { LoadingController } from 'ionic-angular';
@@ -46,9 +45,9 @@ export class LoginPage {
 	       			var pass = dados.senha;
 	       	for (var i = 0; i < qnt; i++) {
 
-	       		if(info[i].email == name & info[i].senha == pass){
+	       		if(info[i].email == name && info[i].senha == pass){
 
-			              	let loader = this.loadingCtrl.create({
+			        let loader = this.loadingCtrl.create({
 				      content: "Espere por favor...",
 				      duration: 3000
 				    });
